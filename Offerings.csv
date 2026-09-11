@@ -1,0 +1,12 @@
+OfferingID,Name,Price,Category,Subcategory,MinPlayers,MinPlayers,Complexity,IsAvailable,PrepTime (Mins)
+COFFEE-01,Flat White,6.00,Consumable,Drink,,,,,5
+COFFEE-02,Soy Latte,6.60,Consumable,Drink,,,,,5
+BISCUIT-01,Anzac Biscuit,6.50,Consumable,Food,,,,,2
+TEA-01,Thai Milk Tea,5.80,Consumable,Drink,,,,,4
+NOODLE-01,Fried Noodle,8.70,Consumable,Food,,,,,10
+CATAN-01,Catan,5.00,Board game,"""Strategy;Dice rolling;Trading;Euro""",3,4,2.3,TRUE,
+CARC-01,Carcassonne,4.50,Board game,"""Tile placement; Area control;Euro""",2,5,1.9,TRUE,
+MONO-01,Monopoly,3.00,Board game,"""Roll and move; Economic;Trading""",2,6,1.6,TRUE,
+CHESS-01,Chess,2.50,Board game,"""Abstract strategy;Classic""",2,2,3.5,TRUE,
+CHARGE-01,Cover Charge,10.00,Fee,,,,,,
+CHIPS-01,Chips,7.00,Consumable,Food,,,,,7

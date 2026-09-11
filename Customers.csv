@@ -1,0 +1,6 @@
+CustID,Name,MembershipType,Phone,Budget,LoyaltyPoints
+CUST-001,Alice Smith,Premium,0412-345-876,20.00,120
+CUST-002,Bob Jones,Basic,0423-456-789,15.50,45
+CUST-003,Bruce Wayne,VIP,0412-345-678,2600.00,5500
+CUST-004,Charlie Brown,VIP,0434-567-890,50.00,350
+CUST-005,Diana Prince,Basic,0445-678-901,10.00,10

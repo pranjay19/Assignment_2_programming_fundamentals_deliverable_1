@@ -1,0 +1,4 @@
+SessionID,CustomerID,GameID,TableNumber,StartTime,EndTime,GuestNumber,Cost,Status
+SES-101,CUST-001,MON-01,4,7/09/2026 14:00PM,,2,50,Active
+SES-102,CUST-002,CARC-01,3,7/09/2026 13:30PM,7/09/2026 16:30PM,5,63,Completed
+SES-103,CUST-003,CAT-01,1,7/09/2026 15:00PM,,4,101.4,Active

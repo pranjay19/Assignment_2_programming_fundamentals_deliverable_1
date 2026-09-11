@@ -1,0 +1,5 @@
+TableNumber,Desc,Seats,MinimumPlay,HasPowerOutlet,IsOccupied
+1,By the west window,4,2,True,False
+2,Near kitchen,2,1,False,True
+3,Round near the entrance,6,4,True,False
+4,Middle large one,8,5,False,True
