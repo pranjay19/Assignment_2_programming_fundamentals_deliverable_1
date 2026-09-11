@@ -1,18 +1,16 @@
-from os import name
-
 class Customer:
     """Represents a customer visiting the board game cafe."""
 
-    def __init__(self, customer_id: int, name: str, membership_type: str,phone: str,budget: float,LoyaltyPoints: int):
+    def __init__(self, customer_id: str, name: str, membership_type: str, phone: str, budget: float, loyalty_points: int):
         self.customer_id = customer_id
         self.name = name
-        self.membership_type= membership_type
+        self.membership_type = membership_type
         self.phone = phone
         self.budget = budget
         self.current_table = None
         self.rented_games = []
         self.tab_total = 0.0
-        self.loyalty_points = LoyaltyPoints
+        self.loyalty_points = loyalty_points
 
     def assign_table(self, table_number: int) -> None:
         """Assigns the customer to a specific cafe table."""
@@ -148,15 +146,25 @@ class TableManager():
             for line in file:
                 TableNumber,Desc,Seats,MinimumPlay,HasPowerOutlet,IsOccupied=line.strip().split(",")
                 Table_object=Table(table_number=int(TableNumber), capacity=int(Seats))
-                self._tables[TableNumber] = Table_object
+                self._tables[int(TableNumber)] = Table_object
 
-    def get_table(self, table_number: str):
-        
-        if table_number in self._tables:
-            return self._tables[table_number]
+    def get_table(self, table_number: int):
+        tbl_num = int(table_number)
+        if tbl_num in self._tables:
+            return self._tables[tbl_num]
         else:
             print(f" Table {table_number} does not exist.")
             return None
+
+class Session:
+
+    def __init__(self, table_obj: Table, customer_obj: Customer, guest_count: int):
+        self.table_obj = table_obj
+        self.customer_obj = customer_obj
+        self.guest_count = guest_count
+
+        self._active_games = []
+        self._ordered_food = []
 
 
 # --- Quick Cafe Scenario Test ---
@@ -174,7 +182,7 @@ if __name__ == "__main__":
                 membership_type=MembershipType,
                 phone=Phone,
                 budget=float(Budget),
-                LoyaltyPoints=int(LoyaltyPoints))
+                loyalty_points=int(LoyaltyPoints))
             customers[CustID] = guest
 
         
