@@ -166,6 +166,34 @@ class Session:
         self._active_games = []
         self._ordered_food = []
 
+    def add_offering(self, item_obj: Offering):
+        
+        
+        if isinstance(item_obj, BoardGame):
+            self._active_games.append(item_obj)
+            print("Game successfully added to the table")
+            
+        elif isinstance(item_obj, FoodDrink):
+            self._ordered_food.append(item_obj)
+            print("Food item successfully added")
+            
+        else:
+            print("Unknown item type! Please try again")
+
+    def calculate_bill(self):
+        
+        total_bill=0.0
+
+        for food in self._ordered_food:
+            total_bill += food.price
+            
+        for game in self._active_games:
+            cover_charge = game.price * self.guest_count
+            total_bill += cover_charge
+            
+        return total_bill
+
+
 
 # --- Quick Cafe Scenario Test ---
 if __name__ == "__main__":
